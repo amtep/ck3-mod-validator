@@ -12,6 +12,10 @@ need_stdout = false
 command = ["cargo", "build", "--color", "always", "-p", "imperator-tiger", "--release"]
 need_stdout = false
 
+[jobs.build_tui]
+command = ["cargo", "build", "--color", "always", "-p", "tiger-tui", "--release"]
+need_stdout = false
+
 [jobs.clippy_ck3]
 command = ["cargo", "clippy", "--color", "always", "-p", "ck3-tiger", "--release"]
 need_stdout = false
@@ -22,6 +26,10 @@ need_stdout = false
 
 [jobs.clippy_imperator]
 command = ["cargo", "clippy", "--color", "always", "-p", "imperator-tiger", "--release"]
+need_stdout = false
+
+[jobs.clippy_tui]
+command = ["cargo", "clippy", "--color", "always", "-p", "tiger-tui", "--release"]
 need_stdout = false
 
 [jobs.test]
@@ -36,7 +44,9 @@ need_stdout = false
 1 = "job:build_ck3"
 2 = "job:build_vic3"
 3 = "job:build_imperator"
+4 = "job:build_tui"
 "!" = "job:clippy_ck3"
 "@" = "job:clippy_vic3"
 "#" = "job:clippy_imperator"
+"$" = "job:clippy_tui"
 "d" = "job:docs"

@@ -6,7 +6,7 @@ members = [
     "imperator-tiger",
     "tiger-bin-shared",
     "utils",
-    ".",
+    ".", "tiger-tui",
 ]
 
 [package]

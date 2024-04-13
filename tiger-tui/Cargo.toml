@@ -1,0 +1,16 @@
+[package]
+name = "tiger-tui"
+version = "0.9.6"
+edition = "2021"
+license = "GPL-3.0-or-later"
+description = "Tiger TUI Application"
+homepage = "https://github.com/amtep/ck3-tiger"
+repository = "https://github.com/amtep/ck3-tiger"
+readme = "../README.md"
+rust-version = "1.70"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+crossterm = "0.27.0"
+ratatui = "0.26.1"
